@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Portfolio Website</title>
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo">Pranjal</a>
+
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#services">Services</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </header>
+  <section class="home">
+    <div class="home-img">
+      <img src="meonport.jpg" alt="">
+    </div>
+    <div class="home-content">
+      <h1>Hi, It's <span>Pranjal</span></h1>
+      <h3 class="typing-text">I'm a <span></span></h3>
+      <p>I am Pranjal Malviya, a B.Tech student passionate about coding, problem-solving, and technology.
+        Currently learning C, C++, Java fundamentals, HTML, and CSS. I enjoy exploring new skills, music, films,
+        and creative learning.</p>
+      <div class="social-icons">
+        <a
+          href="https://l.instagram.com/?u=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fpranjal-malviya-1b6568382%3Futm_source%3Dshare%26utm_campaign%3Dshare_via%26utm_content%3Dprofile%26utm_medium%3Dandroid_app%26fbclid%3DPAZXh0bgNhZW0CMTEAAadCDH0xYGW3X44qlp51Ekoe-0Qlfi9qeDO8twkNPTEycSJIcnf7xpwLNeXdUA_aem_JbpD0wsY9G0djxti4PNIYw&e=AT2d2eFYUgL_P9dyt8RYTssTeDiVxgjMQWz51I5PIFM8-8zAQ-DHch68DIeoBgnW4SG0P-xN8eFr2yfk_DPu-1nP1f8bBWMME6CGvnbd2zM6kUo-a8gTUHtHhg"><i
+            class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.instagram.com/thenameispranjal.exe?igsh=MWE0YmIybmdnb3N0Yw== "><i
+            class="fa-brands fa-instagram"></i></a>
+      </div>
+      <a href="#" class="btn">Hire me</a>
+    </div>
+  </section>
+  <!-- Skills Section -->
+  <section id="skills">
+    <!-- Faint big heading -->
+    <h2 class="section-bg-title">SKILLS.</h2>
+
+    <!-- Main title -->
+    <h2 class="section-title">My <span>Skills</span></h2>
+
+    <div class="skills-container">
+      <div class="skill"><i class="fab fa-git-alt"></i> Git/GitHub</div>
+      <div class="skill"><i class="fas fa-project-diagram"></i> Data Structures & Algorithms</div>
+      <div class="skill"><i class="fas fa-code"></i> C Programming</div>
+      <div class="skill"><i class="fab fa-java"></i> Java Fundamentals</div>
+      <div class="skill"><i class="fab fa-html5"></i> HTML</div>
+      <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
+      <div class="skill"><i class="fas fa-code-branch"></i> C++</div>
+      <div class="skill"><i class="fas fa-comments"></i> Communication Skills</div>
+      <div class="skill"><i class="fas fa-lightbulb"></i> Problem Solving</div>
+      <div class="skill"><i class="fas fa-language"></i> English</div>
+    </div>
+  </section>
+  <!--Contact section -->
+  <section id="contact" class="fade-section">
+    <h2 class="contact-heading"><span>My</span> Contact</h2>
+    <p class="contact-subtitle">Below are the details to reach out to me</p>
+
+    <div class="contact-container">
+      <div class="contact-item">
+        <div class="icon"><i class="fas fa-envelope"></i></div>
+        <h3>Email</h3>
+        <p>yourmail@gmail.com</p>
+      </div>
+      <div class="contact-item">
+        <div class="icon"><i class="fas fa-phone"></i></div>
+        <h3>Phone</h3>
+        <p>+91 9876543210</p>
+      </div>
+      <div class="contact-item">
+        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+        <h3>Location</h3>
+        <p>City, Country</p>
+      </div>
+      <div class="contact-item">
+          <div class="icon"><i class="fa-solid fa-download"></i></div>
+          <h3>Resume</h3>
+          <a href="resume.pdf" download>Download</a>
+      </div>
+    </div>
+
+    <div class="social-section">
+      <h3 class="find-me">Find me on</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <button class="thankyou-btn">Thankyou</button>
+  </section>
+  <script>
+    // Smooth fade-in + slide every time section appears
+    // Fade-in + Slide-up every time for Contact section
+const contactSection = document.querySelector("#contact");
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Reset animation every time
+      entry.target.classList.remove("show");
+        void entry.target.offsetWidth; // reflow to restart animation
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show"); // remove jab section chhod do
+      }
+    });
+  },
+  { threshold: 0.3 }
+);
+
+observer.observe(contactSection);
+
+// Navbar active state fix
+const navLinks = document.querySelectorAll("header nav a");
+window.addEventListener("scroll", () => {
+  let current = "";
+  document.querySelectorAll("section").forEach(sec => {
+    const secTop = sec.offsetTop - 120;
+    if (scrollY >= secTop) current = sec.getAttribute("id");
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+    }
+  });
+});
+
+
+</script>
+
+
+
+</body>
+
+</html>
